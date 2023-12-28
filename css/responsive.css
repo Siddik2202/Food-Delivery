@@ -1,0 +1,147 @@
+@media(max-width:1200px){
+    .header{
+        padding: 10px 5%;
+    }
+    section{
+        padding: 50px 4% 40px;
+    }
+
+}
+
+@media(max-width:1100px){
+    :root{
+        --big-font:3.6rem;
+        --h2-font:2.6rem;
+        --p-font:0.9rem;
+    }
+    .home{
+        height: 80vh;
+        margin-top: 5rem;
+    }
+    section{
+        padding:30px 4% 20px; 
+    }
+    .home-content h1{
+        margin-bottom: 1rem;
+    }
+    .home-content p{
+        margin-bottom: 1.2rem;
+    }
+    .catagories-content{
+        gap: 20px;
+    }
+    .box{
+        padding: 10px;
+    }
+    .header{
+        padding: 1.5rem 7%;
+    }
+
+
+}
+
+
+@media(max-width:1020px){
+
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        background:var(--big-font);
+        box-shadow: 0 4px 4px rgba(0 0 0 /10%);
+        transition: all ease .50s;
+    }
+    .navbar a{
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 5px 30px;
+        padding: 10px 0;
+    }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.open{
+        top: 100%;
+    }
+}
+
+@media(max-width:900px){
+    :root{
+        --big-font:3rem;
+        --h2-font:2rem;
+        --p-font:0.9rem;
+    }
+    .home{
+        height: 70vh;
+    }
+    section{
+        padding: 65px 4% 55px;
+    }
+
+
+}
+@media(max-width:800px){
+    .home{
+        height: 100vh;
+        grid-template-columns: 1fr;
+        margin-bottom: 10rem;
+    }
+    .home-content{
+        order: 2;
+    }
+    .home-img{
+        text-align: center;
+        padding-top: 30px;
+    }
+    .home-img img{
+        width: 430px;
+        max-width: 100%;
+    }
+    .catagories-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    
+    }
+    .history-img{
+        text-align: center;
+        padding-top: 10px;
+    }
+    .history-img img{
+        width: 370px;
+        max-width: 100%;
+        height: auto;
+    }
+    .testimonial{
+        grid-template-columns: 1fr;
+
+    }
+    .testimonial-left{
+        text-align: center;
+    }
+    .testimonial-right{
+        text-align: center;
+    }
+    .testimonial-left strong{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+     
+
+}
+
+
+
+
+
+
+
+
