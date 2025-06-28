@@ -1,0 +1,56 @@
+pipeline {
+    agent { label 'node' }  // Your connected slave node label
+
+    environment {
+        IMAGE_NAME = 'food-delivery:latest'
+        CONTAINER_NAME = 'food-delivery-container'
+    }
+
+    stages {
+        stage('Code Clone') {
+            steps {
+                echo 'Cloning repository...'
+                sh 'whoami'
+                git url: 'https://github.com/Siddik2202/Food-Delivery', branch: 'main'
+                echo '✅ Code cloned successfully.'
+            }
+        }
+
+        stage('Code Build') {
+            steps {
+                echo 'Building Docker image...'
+                sh '''
+                    docker build -t $IMAGE_NAME .
+                '''
+                echo '✅ Build completed.'
+            }
+        }
+
+        stage('Deploy Stage') {
+            steps {
+                echo 'Deploying Docker container...'
+                sh '''
+                    echo "Stopping and removing existing container if exists..."
+                    docker rm -f food-delivery-container || true
+        
+                    echo "Rebuilding image with latest code..."
+                    docker build -t food-delivery:latest .
+        
+                    echo "Running updated container..."
+                    docker run -d --name food-delivery-container -p 90:80 food-delivery:latest
+                '''
+                echo '✅ Deployment complete.'
+            }
+        }
+
+    }
+
+    post {
+        success {
+            echo '🎉 Pipeline executed successfully!'
+        }
+        failure {
+            echo '❌ Pipeline failed. Please check the logs.'
+        }
+    }
+}
