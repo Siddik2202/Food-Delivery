@@ -17,6 +17,6 @@ After creating images run this to containerzing docker run -d -p 8080:80 my-stat
 
 Befor browser it, Add inbound rule 8080 tcp port.
 
-Then run http://<your public id>:8080 according to my project.
+Then run http://< your ip >:8080 according to my project.
 
 Thank you 
