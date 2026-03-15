@@ -1,7 +1,6 @@
 # Food-Delivery
-This is a static food delivery website
-<br>
-Using HTML, CSS and JavaScript.
+## This is a static food delivery website
+### Using HTML, CSS and JavaScript.
 
 I also run this project through docker and EC2 instance.
 
