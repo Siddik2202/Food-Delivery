@@ -1,11 +1,12 @@
-# Food-Delivery
-## This is a static food delivery website
-### Using HTML, CSS and JavaScript.
+# Food-Delivery Website
+## This is a static food delivery website using HTML, CSS, JavaScript
 
-I also run this project through docker and EC2 instance.
+1. I deploy this project through docker and EC2 instance.
 
-First host a instance server then clone your file using 
-      sudo git clone <url>.
+### 1. Launch EC2 Instance
+Create an EC2 instance and connect using SSH.
+``` sudo git clone https://github.com/Siddik2202/Food-Delivery.git
+```
 
 Then create a Dockerfile in your root folder here I expose port 80 and copy files in Official Docker Nginx image
 
