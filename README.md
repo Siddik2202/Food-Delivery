@@ -6,7 +6,7 @@
 ### 1. Launch EC2 Instance
 Create an EC2 instance and connect using SSH.
 ```bash
-    sudo git clone https://github.com/Siddik2202/Food-Delivery.git
+sudo git clone https://github.com/Siddik2202/Food-Delivery.git
 ```
 
 ### 2. Then create a Dockerfile in your root folder, here I expose port 80 and copy files in Official Docker Nginx image
@@ -16,9 +16,10 @@ Create an EC2 instance and connect using SSH.
  ```bash
 docker build -t my-static-website .
 ```
+
 #### 3. After creating images run this to containerzing 
 ```bash
-    docker run -d -p 8080:80 my-static-website
+docker run -d -p 8080:80 my-static-website
 ```
 
 * Here will store our files in this location "usr/share/nginx/html"(Official Docker Nginx image) default root directory where Nginx looks for static files (like .html, .css, .js) to serve when it starts up.
