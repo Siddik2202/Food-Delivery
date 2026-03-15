@@ -4,7 +4,8 @@
 
 I also run this project through docker and EC2 instance.
 
-First host a instance server then clone your file using sudo git clone <url>.
+First host a instance server then clone your file using 
+      sudo git clone <url>.
 
 Then create a Dockerfile in your root folder here I expose port 80 and copy files in Official Docker Nginx image
 
