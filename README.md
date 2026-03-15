@@ -5,7 +5,7 @@
 
 ### 1. Launch EC2 Instance
 Create an EC2 instance and connect using SSH.
-``` sudo git clone https://github.com/Siddik2202/Food-Delivery.git
+```bash sudo git clone https://github.com/Siddik2202/Food-Delivery.git
 ```
 
 Then create a Dockerfile in your root folder here I expose port 80 and copy files in Official Docker Nginx image
