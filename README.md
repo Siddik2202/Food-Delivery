@@ -9,7 +9,7 @@ Create an EC2 instance and connect using SSH.
 sudo git clone https://github.com/Siddik2202/Food-Delivery.git
 ```
 
-### 2. Then create a Dockerfile(already in root file) in your root folder, here I expose port 80 and copy files in Official Docker Nginx image
+### 2. Then create a Dockerfile (already in root file) in your root folder, here I expose port 80 and copy files in Official Docker Nginx image
    
    Run this command for build images   
  ```bash
