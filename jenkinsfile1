@@ -1,0 +1,28 @@
+# Make sure you install apache or nginx server for run this static web
+# sudo apt update
+# sudo apt install apache2 -y
+# Also gve permission to rwx on var/www/html 
+# sudo chmod -R 777 /var/www/html
+pipeline {
+    agent { label 'agent' } # specific agent you want to execute
+
+    stages {
+        stage('Clone Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Siddik2202/Food-Delivery.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'echo "Building static website"'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'cp -r * /var/www/html/'
+            }
+        }
+    }
+}
