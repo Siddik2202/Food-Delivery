@@ -67,4 +67,4 @@ pipeline {
     }
 }
 ```
-#### 6. Now It will work If your setupp is correct.
+#### 6. Now It will work If your setup is correct.
