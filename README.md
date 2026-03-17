@@ -28,3 +28,18 @@ docker run -d -p 8080:80 my-static-website
 Then run http://< your ip >:8080 according to my project.
 
 Thank you 
+
+## Now we will deploy this static food delivery website through Jenkins without help of Docker.
+
+#### 1. First of you Need you understand Jenkins, installation process, master-slave architechture and connect of them. 
+### 2. SO 1st create declearative pipeline project with name and select github option with url.
+### 3. Make sure you install apached/ nginx server on you ec2 and give rwx permission on var/www/html location then you can process.
+```bash
+sudo apt update
+sudo apt install apache2 -y
+# Bydefault static project store here
+sudo chmod -R 777 /var/www/html
+```
+### 4. Make sure you used specific agent where you want to execute or use "agent any" on pipeline for random execute
+### 5. Then copy jenkinsfile1 then past on pipeline and execute.
+### 6. Now It will work If your setupp is correct.
