@@ -41,5 +41,30 @@ sudo apt install apache2 -y
 sudo chmod -R 777 /var/www/html
 ```
 #### 4. Make sure you used specific agent where you want to execute or use "agent any" on pipeline for random execute
-#### 5. Then copy jenkinsfile1 then past on pipeline and execute.
+#### 5. Then copy below code then past on pipeline and execute.
+```bash
+pipeline {
+    agent { label 'agent' } # specific agent you want to execute
+
+    stages {
+        stage('Clone Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Siddik2202/Food-Delivery.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'echo "Building static website"'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'cp -r * /var/www/html/'
+            }
+        }
+    }
+}
+```
 #### 6. Now It will work If your setupp is correct.
